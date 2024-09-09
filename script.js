@@ -80,6 +80,28 @@ function showToast(message) {
     }, 3000);
 }
 
+// Pega o modal e o elemento da imagem dentro do modal
+const imageModal = document.getElementById('imageModal');
+const modalImg = document.getElementById('imgModal');
+const closeModal = document.querySelector('.close-image-modal');
+
+// Função para abrir a imagem em tela cheia
+function openImageModal(src) {
+    imageModal.style.display = 'block';
+    modalImg.src = src;
+}
+
+// Função para fechar o modal ao clicar no X ou fora da imagem
+closeModal.onclick = function() {
+    imageModal.style.display = 'none';
+}
+
+window.onclick = function(event) {
+    if (event.target == imageModal) {
+        imageModal.style.display = 'none';
+    }
+}
+
 // Função para finalizar a compra e enviar para o WhatsApp
 document.getElementById('finalizarCompra').onclick = function() {
     let mensagem = 'Resumo do Pedido:\n';

@@ -17,13 +17,13 @@
         <section id="ervas">
             <h2>Ervas</h2>
             <div class="produto">
-                <img src="https://http2.mlstatic.com/D_NQ_NP_810158-MLU74925897339_032024-O.webp" alt="Erva 1">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_810158-MLU74925897339_032024-O.webp" alt="Erva 1"onclick="openImageModal('https://http2.mlstatic.com/D_NQ_NP_810158-MLU74925897339_032024-O.webp')">
                 <h3>Erva Mate Limão Rosa</h3>
                 <p>R$ 10,00</p>
                 <button onclick="addToCart('Erva Mate Tradicional', 10)">Adicionar ao carrinho</button>
             </div>
             <div class="produto">
-                <img src="https://images.tcdn.com.br/img/img_prod/1197310/erva_mate_chacal_menta_2385_1_a8515f167e56b025d8a36706da52f15b.jpg" alt="Erva 2">
+                <img src="https://images.tcdn.com.br/img/img_prod/1197310/erva_mate_chacal_menta_2385_1_a8515f167e56b025d8a36706da52f15b.jpg" alt="Erva 2"onclick="openImageModal('https://images.tcdn.com.br/img/img_prod/1197310/erva_mate_chacal_menta_2385_1_a8515f167e56b025d8a36706da52f15b.jpg')">
                 <h3>Erva Mate Sabor Menta</h3>
                 <p>R$ 12,00</p>
                 <button onclick="addToCart('Erva Mate Sabor Limão', 12)">Adicionar ao carrinho</button>
@@ -101,6 +101,12 @@
              <span id="cartCounter">0</span>
          </button>
     </main>
+
+     <!-- Modal de imagem em tela cheia -->
+    <div id="imageModal" class="image-modal">
+        <span class="close-image-modal">&times;</span>
+        <img class="image-modal-content" id="imgModal">
+    </div>
 
     <!-- Elemento para a mensagem de feedback ao adicionar ao carrinho -->
     <div id="toast" class="toast">Produto adicionado ao carrinho!</div>
