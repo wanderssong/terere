@@ -21,14 +21,16 @@ header {
 }
 
 #logo {
-    width: 50px;
+    width: 130px;
     height: 50px;
 }
 
 main {
     margin-top: 20px;
 }
-
+h1 {
+    font-size: 30px;
+}
 h2 {
     color: #333;
 }
