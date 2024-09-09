@@ -90,7 +90,7 @@ document.getElementById('finalizarCompra').onclick = function() {
     mensagem += 'Entrega gratuita em Sinop!';
     
     const encodedMessage = encodeURIComponent(mensagem);
-    const whatsappUrl = `https://wa.me/556696967403?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/556696967406?text=${encodedMessage}`;
     
     // Redireciona para o WhatsApp
     window.open(whatsappUrl, '_blank');
