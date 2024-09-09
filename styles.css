@@ -83,18 +83,29 @@ button:hover {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+    
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 .modal-content {
     background-color: #fff;
-    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 90%;
     max-width: 400px;
     border-radius: 10px;
     text-align: center;
+    max-height: 90%; /* Evita que o modal cresça demais no mobile */
+    overflow-y: auto; /* Adiciona barra de rolagem se o conteúdo for maior que a altura do modal */
+}
+
+/* Força o modal a centralizar perfeitamente em telas pequenas */
+@media (max-height: 700px) {
+    .modal-content {
+        margin-top: 10%; /* Adiciona um pequeno espaço no topo em telas muito pequenas */
+    }
 }
 
 .close {

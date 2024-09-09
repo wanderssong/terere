@@ -49,24 +49,26 @@ function updateCartDisplay() {
 }
 
 // Função para mostrar o modal do carrinho
-const modal = document.getElementById('modalCarrinho');
-const btnAbrirCarrinho = document.getElementById('abrirCarrinho');
-const btnFecharCarrinho = document.getElementsByClassName('close')[0];
+const modalCarrinho = document.getElementById("modalCarrinho");
+const abrirCarrinho = document.getElementById("abrirCarrinho");
+const fecharModal = document.querySelector(".modal .close");
 
-btnAbrirCarrinho.onclick = function() {
-    modal.style.display = 'block';
-}
+// Função para abrir o modal
+abrirCarrinho.addEventListener('click', function() {
+    modalCarrinho.style.display = "flex"; // Exibe o modal (com flexbox para manter o alinhamento)
+});
 
-btnFecharCarrinho.onclick = function() {
-    modal.style.display = 'none';
-}
+// Função para fechar o modal
+fecharModal.addEventListener('click', function() {
+    modalCarrinho.style.display = "none"; // Oculta o modal
+});
 
-// Fecha o modal quando o usuário clicar fora dele
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = 'none';
+// Fecha o modal se o usuário clicar fora do conteúdo do modal
+window.addEventListener('click', function(event) {
+    if (event.target == modalCarrinho) {
+        modalCarrinho.style.display = "none";
     }
-}
+});
 
 // Função para mostrar o toast (mensagem de feedback)
 function showToast(message) {
@@ -74,10 +76,10 @@ function showToast(message) {
     toast.textContent = message;
     toast.className = 'toast show';
 
-    // Após 3 segundos, esconde a mensagem
+    // Após 2 segundos, esconde a mensagem
     setTimeout(function() {
         toast.className = toast.className.replace('show', '');
-    }, 3000);
+    }, 2000);
 }
 
 // Pega o modal e o elemento da imagem dentro do modal
