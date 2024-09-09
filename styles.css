@@ -58,7 +58,7 @@ button {
 /* Redução do tamanho dos botões */
 button {
     font-size: 12px;
-    padding: 4px 8px;
+    padding: 3px 6px;
 }
 
 button:hover {
@@ -145,6 +145,34 @@ button:hover {
     background-color: #E64A19;
 }
 
+/* Toast (mensagem rápida ao adicionar ao carrinho) */
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1001;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.5s ease, visibility 0s linear 0.5s;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    visibility: visible;
+    transition-delay: 0s;
+}
 /* Estilo do Footer */
 footer {
     background-color: #4CAF50;
@@ -153,6 +181,7 @@ footer {
     text-align: center;
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
 }
