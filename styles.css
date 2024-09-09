@@ -15,9 +15,31 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #4CAF50;
+    background-image: url('https://mateinbox.com.br/wp-content/uploads/2019/11/melhor-erva-mate-para-terere-min-1024x683.jpg'); /* Adiciona a imagem de fundo */
+    background-size: cover; /* Garante que a imagem cubra o header */
+    background-position: center;
+    position: relative; /* Para permitir a camada de transparência */
     color: white;
     padding: 10px 20px;
+    height: 110px; /* Ajuste o tamanho do header conforme necessário */
+}
+
+/* Adiciona uma camada transparente sobre a imagem */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de opacidade */
+    z-index: 1; /* Garante que a camada fique abaixo do conteúdo */
+}
+
+/* Estilo do conteúdo do header */
+header * {
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo fique acima da camada de transparência */
 }
 
 #logo {
