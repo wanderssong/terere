@@ -10,7 +10,7 @@ header {
     align-items: center;
     background-color: #4CAF50;
     color: white;
-    padding: 10px;
+    padding: 10px 20px;
 }
 
 #logo {
@@ -18,17 +18,17 @@ header {
     height: 50px;
 }
 
-button {
-    background-color: #4CAF50;
+#abrirCarrinho {
+    background-color: #FF5722;
     color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 10px;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 5px;
 }
 
-button:hover {
-    background-color: #45a049;
+#abrirCarrinho:hover {
+    background-color: #E64A19;
 }
 
 main {
@@ -54,36 +54,75 @@ h2 {
     height: 50px;
 }
 
-#carrinho {
-    margin-top: 30px;
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Modal do Carrinho */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
     background-color: #fff;
+    margin: 15% auto;
     padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 400px;
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 #itensCarrinho {
     list-style: none;
     padding: 0;
+    margin: 20px 0;
 }
 
 #itensCarrinho li {
     margin-bottom: 10px;
 }
 
-#finalizarCompra, #fecharCarrinho {
+#finalizarCompra {
     background-color: #FF5722;
     color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
-    margin-right: 5px;
+    border-radius: 5px;
+    width: 100%;
 }
 
-#finalizarCompra:hover, #fecharCarrinho:hover {
+#finalizarCompra:hover {
     background-color: #E64A19;
-}
-
-.oculto {
-    display: none;
 }

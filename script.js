@@ -1,18 +1,16 @@
 let carrinho = [];
 let total = 0;
-let contador = 0;
 
 function addToCart(produto, preco) {
     carrinho.push({ produto, preco });
     total += preco;
-    contador++;
     updateCart();
+    updateCartCounter();
 }
 
 function updateCart() {
     const itensCarrinho = document.getElementById("itensCarrinho");
     const totalElement = document.getElementById("total");
-    const contadorCarrinho = document.getElementById("contadorCarrinho");
 
     itensCarrinho.innerHTML = "";
     carrinho.forEach(item => {
@@ -22,19 +20,35 @@ function updateCart() {
     });
 
     totalElement.textContent = total.toFixed(2);
-    contadorCarrinho.textContent = contador;
 }
 
-// Abrir e fechar o carrinho
-document.getElementById("abrirCarrinho").addEventListener("click", () => {
-    document.getElementById("carrinho").classList.remove("oculto");
-});
+function updateCartCounter() {
+    const contadorCarrinho = document.getElementById("contadorCarrinho");
+    contadorCarrinho.textContent = carrinho.length;
+}
 
-document.getElementById("fecharCarrinho").addEventListener("click", () => {
-    document.getElementById("carrinho").classList.add("oculto");
-});
+// Função para abrir e fechar o modal do carrinho
+const modal = document.getElementById("modalCarrinho");
+const abrirCarrinhoBtn = document.getElementById("abrirCarrinho");
+const closeBtn = document.getElementsByClassName("close")[0];
 
-// Finalizar compra e enviar para WhatsApp
+// Abre o modal
+abrirCarrinhoBtn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// Fecha o modal ao clicar no X
+closeBtn.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Fecha o modal ao clicar fora da área do modal
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
 document.getElementById("finalizarCompra").addEventListener("click", () => {
     if (carrinho.length === 0) {
         alert("Seu carrinho está vazio.");
