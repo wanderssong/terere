@@ -45,7 +45,7 @@ function showToast(message) {
     // Após 3 segundos, remover a classe "show" para esconder a mensagem
     setTimeout(function() {
         toast.className = toast.className.replace("show", "");
-    }, 3000);
+    }, 2000);
 }
 
 // Função para abrir o modal do carrinho
