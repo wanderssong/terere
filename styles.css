@@ -21,7 +21,7 @@ header {
     position: relative; /* Para permitir a camada de transparência */
     color: white;
     padding: 10px 20px;
-    height: 110px; /* Ajuste o tamanho do header conforme necessário */
+    height: 90px; /* Ajuste o tamanho do header conforme necessário */
 }
 
 /* Adiciona uma camada transparente sobre a imagem */
