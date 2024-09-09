@@ -41,6 +41,11 @@ h2 {
     height: 50px;
 }
 
+/* Tamanho da fonte dos títulos h3 reduzido */
+.produto h3 {
+    font-size: 14px;
+}
+
 button {
     background-color: #4CAF50;
     color: white;
@@ -48,6 +53,12 @@ button {
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 3px;
+}
+
+/* Redução do tamanho dos botões */
+button {
+    font-size: 12px;
+    padding: 4px 8px;
 }
 
 button:hover {
