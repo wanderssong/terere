@@ -89,7 +89,7 @@ button {
 /* Redução do tamanho dos botões */
 button {
     font-size: 12px;
-    padding: 3px 6px;
+    padding: 2px 5px;
 }
 
 button:hover {
