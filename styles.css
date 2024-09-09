@@ -227,6 +227,8 @@ button:hover {
     max-width: 700px;
     max-height: 80%; /* Limita a altura para caber na tela */
     margin-top: 5%;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 .close-image-modal {
