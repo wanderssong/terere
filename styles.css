@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 /* Conteúdo principal */
@@ -135,7 +136,7 @@ button:hover {
 /* Estilo do botão do carrinho */
 #abrirCarrinho {
     position: fixed;
-    bottom: 70px; /* Ajuste para evitar sobreposição com o footer */
+    bottom: 70px;
     right: 20px;
     width: 50px;
     height: 50px;
@@ -147,14 +148,29 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px; /* Ajuste o tamanho do ícone conforme necessário */
     cursor: pointer;
-    z-index: 1000; /* Garante que o botão fique acima do conteúdo */
+    z-index: 1000;
 }
 
 #abrirCarrinho img {
-    width: 24px; /* Ajuste o tamanho do ícone */
-    height: 24px;
+    width: 34px;
+    height: 34px;
+}
+
+#cartCounter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 /* Toast (mensagem rápida ao adicionar ao carrinho) */

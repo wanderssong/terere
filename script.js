@@ -1,77 +1,97 @@
 // Array para armazenar os itens do carrinho
-let cartItems = [];
+let carrinho = [];
 let total = 0;
+// Variável para o contador do carrinho
+let cartCount = 0;
 
-// Função para adicionar o produto ao carrinho
+// Função para adicionar produtos ao carrinho
 function addToCart(produto, preco) {
-    // Lógica para adicionar ao carrinho
-    let item = {
-        nome: produto,
-        valor: preco
-    };
-    cartItems.push(item);
+    // Adiciona o produto ao array do carrinho
+    carrinho.push({ produto, preco });
+    
+    // Atualiza o total
     total += preco;
-    updateCart();
 
-    // Exibir a mensagem de feedback
-    showToast("Produto adicionado ao carrinho!");
+    // Atualiza a exibição dos itens no modal do carrinho
+    updateCartDisplay();
+
+    // Incrementa o contador do carrinho
+    cartCount++;
+    updateCartCounter();
+
+    // Exibe a mensagem de "Produto adicionado ao carrinho"
+    showToast('Produto adicionado ao carrinho!');
 }
 
-// Função para atualizar o carrinho (contador e total)
-function updateCart() {
-    let contadorCarrinho = document.getElementById("contadorCarrinho");
-    let totalElement = document.getElementById("total");
+// Função para atualizar o contador do carrinho
+function updateCartCounter() {
+    const cartCounter = document.getElementById('cartCounter');
+    cartCounter.textContent = cartCount;
+}
+
+// Função para exibir os itens do carrinho no modal
+function updateCartDisplay() {
+    const itensCarrinho = document.getElementById('itensCarrinho');
+    const totalElement = document.getElementById('total');
     
-    contadorCarrinho.textContent = cartItems.length;
-    totalElement.textContent = total.toFixed(2); // Atualiza o total com duas casas decimais
+    // Limpa os itens atuais do carrinho
+    itensCarrinho.innerHTML = '';
     
-    // Atualiza a lista de itens no carrinho (modal)
-    let itensCarrinho = document.getElementById("itensCarrinho");
-    itensCarrinho.innerHTML = ''; // Limpa a lista atual
-    
-    cartItems.forEach(function(item) {
-        let li = document.createElement('li');
-        li.textContent = `${item.nome} - R$ ${item.valor.toFixed(2)}`;
+    // Adiciona cada item do carrinho na lista
+    carrinho.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.produto} - R$ ${item.preco.toFixed(2)}`;
         itensCarrinho.appendChild(li);
     });
-}
-
-// Função para exibir a mensagem rápida (toast)
-function showToast(message) {
-    var toast = document.getElementById("toast");
-    toast.textContent = message; // Define a mensagem do toast
-    toast.className = "toast show"; // Adiciona a classe que mostra o toast
     
-    // Após 3 segundos, remover a classe "show" para esconder a mensagem
+    // Atualiza o total no modal
+    totalElement.textContent = total.toFixed(2);
+}
+
+// Função para mostrar o modal do carrinho
+const modal = document.getElementById('modalCarrinho');
+const btnAbrirCarrinho = document.getElementById('abrirCarrinho');
+const btnFecharCarrinho = document.getElementsByClassName('close')[0];
+
+btnAbrirCarrinho.onclick = function() {
+    modal.style.display = 'block';
+}
+
+btnFecharCarrinho.onclick = function() {
+    modal.style.display = 'none';
+}
+
+// Fecha o modal quando o usuário clicar fora dele
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Função para mostrar o toast (mensagem de feedback)
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    toast.textContent = message;
+    toast.className = 'toast show';
+
+    // Após 3 segundos, esconde a mensagem
     setTimeout(function() {
-        toast.className = toast.className.replace("show", "");
-    }, 2000);
+        toast.className = toast.className.replace('show', '');
+    }, 3000);
 }
 
-// Função para abrir o modal do carrinho
-function openCart() {
-    document.getElementById("modalCarrinho").style.display = "block";
-}
-
-// Função para fechar o modal do carrinho
-function closeCart() {
-    document.getElementById("modalCarrinho").style.display = "none";
-}
-
-// Evento para fechar o modal ao clicar no "X"
-document.querySelector(".close").addEventListener("click", closeCart);
-
-// Evento para abrir o carrinho ao clicar no botão flutuante
-document.getElementById("abrirCarrinho").addEventListener("click", openCart);
-
-// Evento para finalizar a compra (redirecionar para o WhatsApp com os itens do carrinho)
-document.getElementById("finalizarCompra").addEventListener("click", function() {
-    let mensagem = "Resumo do Pedido:\n";
-    cartItems.forEach(function(item) {
-        mensagem += `${item.nome} - R$ ${item.valor.toFixed(2)}\n`;
+// Função para finalizar a compra e enviar para o WhatsApp
+document.getElementById('finalizarCompra').onclick = function() {
+    let mensagem = 'Resumo do Pedido:\n';
+    carrinho.forEach(item => {
+        mensagem += `${item.produto} - R$ ${item.preco.toFixed(2)}\n`;
     });
-    mensagem += `Total: R$ ${total.toFixed(2)}\nEntrega gratuita em Sinop!`;
-
-    // Redireciona para o WhatsApp com a mensagem
-    window.open(`https://wa.me/556696967403?text=${encodeURIComponent(mensagem)}`, '_blank');
-});
+    mensagem += `Total: R$ ${total.toFixed(2)}\n`;
+    mensagem += 'Entrega gratuita em Sinop!';
+    
+    const encodedMessage = encodeURIComponent(mensagem);
+    const whatsappUrl = `https://wa.me/556696967403?text=${encodedMessage}`;
+    
+    // Redireciona para o WhatsApp
+    window.open(whatsappUrl, '_blank');
+}
