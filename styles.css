@@ -15,7 +15,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: url('https://mateinbox.com.br/wp-content/uploads/2019/11/melhor-erva-mate-para-terere-min-1024x683.jpg'); /* Adiciona a imagem de fundo */
+    background-image: url('https://img.freepik.com/fotos-gratis/desfoque-abstrato-estudio-vazio-de-gradiente-verde-bem-use-como-modelo-de-site-de-fundo-de-relatorio-de-negocios_1258-52607.jpg'); /* Adiciona a imagem de fundo */
     background-size: cover; /* Garante que a imagem cubra o header */
     background-position: center;
     position: relative; /* Para permitir a camada de transparência */
@@ -51,7 +51,7 @@ main {
     margin-top: 20px;
 }
 h1 {
-    font-size: 23px;
+    font-size: 28px;
 }
 h2 {
     color: #333;
