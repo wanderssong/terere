@@ -127,6 +127,34 @@
                 <ul id="itensCarrinho"></ul>
                 <p>Total: R$ <span id="total">0</span></p>
                 <p><strong>Entrega gratuita em Sinop!</strong></p>
+                
+                <!-- Seção de seleção de forma de pagamento -->
+                <div id="pagamentoSection">
+                    <h3>Forma de pagamento</h3>
+                    <div class="pagamento-opcoes">
+                        <label class="opcao-pagamento">
+                            <input type="radio" name="pagamento" value="Dinheiro" checked>
+                            <span>Dinheiro</span>
+                        </label>
+                        <label class="opcao-pagamento">
+                            <input type="radio" name="pagamento" value="Pix">
+                            <span>Pix</span>
+                        </label>
+                        <label class="opcao-pagamento">
+                            <input type="radio" name="pagamento" value="Cartão de Débito">
+                            <span>Cartão de Débito</span>
+                        </label>
+                        <label class="opcao-pagamento">
+                            <input type="radio" name="pagamento" value="Cartão de Crédito">
+                            <span>Cartão de Crédito</span>
+                        </label>
+                        <label class="opcao-pagamento">
+                            <input type="radio" name="pagamento" value="Cartão de Crédito 2x">
+                            <span>Cartão de Crédito (2x)</span>
+                        </label>
+                    </div>
+                </div>
+                
                 <button id="finalizarCompra">Finalizar Compra</button>
             </div>
         </div>
@@ -136,6 +164,8 @@
              <img src="img/iconcarri.png" alt="Carrinho">
              <span id="cartCounter">0</span>
          </button>
+
+          
     </main>
 
      <!-- Modal de imagem em tela cheia -->

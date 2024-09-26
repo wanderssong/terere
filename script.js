@@ -1,4 +1,3 @@
-// Array para armazenar os itens do carrinho
 let carrinho = [];
 let total = 0;
 // Variável para o contador do carrinho
@@ -38,14 +37,40 @@ function updateCartDisplay() {
     itensCarrinho.innerHTML = '';
     
     // Adiciona cada item do carrinho na lista
-    carrinho.forEach(item => {
+    carrinho.forEach((item, index) => {
         const li = document.createElement('li');
         li.textContent = `${item.produto} - R$ ${item.preco.toFixed(2)}`;
+        
+        // Botão para remover o item
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'Remover';
+        removeButton.onclick = () => removeFromCart(index);
+        li.appendChild(removeButton);
+
         itensCarrinho.appendChild(li);
     });
     
     // Atualiza o total no modal
     totalElement.textContent = total.toFixed(2);
+}
+
+// Função para remover produtos do carrinho
+function removeFromCart(index) {
+    // Remove o produto do carrinho
+    const item = carrinho.splice(index, 1)[0];
+    
+    // Atualiza o total
+    total -= item.preco;
+
+    // Atualiza o display do carrinho
+    updateCartDisplay();
+
+    // Decrementa o contador do carrinho
+    cartCount--;
+    updateCartCounter();
+
+    // Exibe mensagem de feedback
+    showToast('Produto removido do carrinho!');
 }
 
 // Função para mostrar o modal do carrinho
@@ -106,16 +131,32 @@ window.onclick = function(event) {
 
 // Função para finalizar a compra e enviar para o WhatsApp
 document.getElementById('finalizarCompra').onclick = function() {
+    const formaPagamento = document.querySelector('input[name="pagamento"]:checked');
     let mensagem = 'Resumo do Pedido:\n';
     carrinho.forEach(item => {
         mensagem += `${item.produto} - R$ ${item.preco.toFixed(2)}\n`;
     });
     mensagem += `Total: R$ ${total.toFixed(2)}\n`;
+    mensagem += `Forma de Pagamento: ${formaPagamento ? formaPagamento.value : 'Não selecionada'}\n`;
     mensagem += 'Entrega gratuita em Sinop!';
     
+    if (formaPagamento && formaPagamento.value === 'Cartão de Crédito 2x') {
+        mensagem += '\n* Taxa da maquininha será aplicada.';
+    }
+
     const encodedMessage = encodeURIComponent(mensagem);
     const whatsappUrl = `https://wa.me/556696967406?text=${encodedMessage}`;
     
     // Redireciona para o WhatsApp
     window.open(whatsappUrl, '_blank');
 }
+
+document.querySelectorAll('input[name="pagamento"]').forEach(input => {
+    input.addEventListener('change', function() {
+        if (this.value === 'Cartão de Crédito 2x') {
+            alert('Uma taxa da máquina será aplicada.');
+        } else {
+            // Ocultar a mensagem se outra forma de pagamento for selecionada
+        }
+    });
+});

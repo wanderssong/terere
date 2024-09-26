@@ -69,7 +69,11 @@ h2 {
 
 .produto img {
     width: 50px;
-    height: 50px;
+    height: auto;
+}
+
+button:focus{
+    outline: 2px solid #4CAF50;
 }
 
 /* Tamanho da fonte dos títulos h3 reduzido */
@@ -84,13 +88,11 @@ button {
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 3px;
-}
-
-/* Redução do tamanho dos botões */
-button {
-    font-size: 12px;
+    font-size: 12px;     /* Redução do tamanho dos botões */
     padding: 2px 5px;
 }
+
+
 
 button:hover {
     background-color: #45a049;
@@ -167,6 +169,38 @@ button:hover {
     background-color: #E64A19;
 }
 
+#pagamentoSection {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+.pagamento-opcoes {
+    display: flex;
+    flex-direction: column;
+}
+.opcao-pagamento {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin: 5px 0;
+    border: 2px solid #007BFF; /* Cor do contorno */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.opcao-pagamento {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin: 5px 0;
+    border: 2px solid #007BFF; /* Cor do contorno */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
 /* Botão Flutuante do Carrinho */
 /* Estilo do botão do carrinho */
 #abrirCarrinho {
@@ -227,6 +261,7 @@ button:hover {
     max-width: 700px;
     max-height: 80%; /* Limita a altura para caber na tela */
     margin-top: 5%;
+    padding: 10px;
     
 }
 
