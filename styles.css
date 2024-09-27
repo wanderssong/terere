@@ -16,28 +16,19 @@ main {
 
 header {
     text-align: center;
-    padding: 22px;
-    background-image: url('https://img.freepik.com/fotos-gratis/desfoque-abstrato-estudio-vazio-de-gradiente-verde-bem-use-como-modelo-de-site-de-fundo-de-relatorio-de-negocios_1258-52607.jpg'); /* Adiciona a imagem de fundo */
+    padding: 17px;
+    background-image: url('https://st4.depositphotos.com/10469770/26859/i/450/depositphotos_268593234-stock-photo-wooden-background-rustic-wood-boards.jpg'); /* Adiciona a imagem de fundo */
     color: #ecf0f1; /* Light text for contrast */
   }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 0;
   }
 
 /* Adiciona uma camada transparente sobre a imagem */
 
-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 40%;
-    background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de opacidade */
-    z-index: 1; /* Garante que a camada fique abaixo do conteúdo */
-}
+
 
 /* Estilo do conteúdo do header */
 header * {
