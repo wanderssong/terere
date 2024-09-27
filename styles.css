@@ -4,7 +4,7 @@ body {
     min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f9;
+    background-image: url('https://thumbs.dreamstime.com/b/fundo-ocidental-com-roupa-do-cowboy-e-papel-velho-para-o-texto-28403058.jpg'); /* Adiciona a imagem de fundo */
     padding: 0;
     color: #333;
 }
@@ -68,7 +68,7 @@ h1 {
     font-size: 28px;
 }
 h2 {
-    color: #333;
+    color: #ffffff;
 }
 
 .produto {
