@@ -128,7 +128,7 @@ button:hover {
 /* Força o modal a centralizar perfeitamente em telas pequenas */
 @media (max-height: 700px) {
     .modal-content {
-        margin-top: 10%; /* Adiciona um pequeno espaço no topo em telas muito pequenas */
+        margin-top: 12%; /* Adiciona um pequeno espaço no topo em telas muito pequenas */
     }
 }
 
