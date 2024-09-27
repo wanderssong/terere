@@ -34,7 +34,7 @@ header::before {
     top: 0;
     left: 0;
     width: 100%;
-    height: 30%;
+    height: 35%;
     background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de opacidade */
     z-index: 1; /* Garante que a camada fique abaixo do conteúdo */
 }
