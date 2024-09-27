@@ -16,7 +16,7 @@ main {
 
 header {
     text-align: center;
-    padding: 25px;
+    padding: 24px;
     background-image: url('https://img.freepik.com/fotos-gratis/desfoque-abstrato-estudio-vazio-de-gradiente-verde-bem-use-como-modelo-de-site-de-fundo-de-relatorio-de-negocios_1258-52607.jpg'); /* Adiciona a imagem de fundo */
     color: #ecf0f1; /* Light text for contrast */
   }
