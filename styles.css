@@ -4,7 +4,7 @@ body {
     min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-image: url('https://thumbs.dreamstime.com/b/fundo-ocidental-com-roupa-do-cowboy-e-papel-velho-para-o-texto-28403058.jpg'); /* Adiciona a imagem de fundo */
+    background-image: url('https://img.freepik.com/free-photo/cowboy-inspiration-with-boots-high-angle_23-2149484759.jpg'); /* Adiciona a imagem de fundo */
     padding: 0;
     color: #333;
 }
@@ -17,7 +17,7 @@ main {
 header {
     text-align: center;
     padding: 17px;
-    background-image: url('https://img.freepik.com/free-photo/cowboy-inspiration-with-boots-high-angle_23-2149484759.jpg'); /* Adiciona a imagem de fundo */
+    background-image: url('https://img.freepik.com/fotos-gratis/fundo-de-tabua-de-madeira_53876-16139.jpg'); /* Adiciona a imagem de fundo */
     color: #ecf0f1; /* Light text for contrast */
   }
 
