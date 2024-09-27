@@ -3,7 +3,10 @@ body {
     flex-direction: column;
     min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    padding: 0;
+    color: #333;
 }
 
 /* Conteúdo principal */
@@ -12,26 +15,26 @@ main {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
+    padding: 30px;
     background-image: url('https://img.freepik.com/fotos-gratis/desfoque-abstrato-estudio-vazio-de-gradiente-verde-bem-use-como-modelo-de-site-de-fundo-de-relatorio-de-negocios_1258-52607.jpg'); /* Adiciona a imagem de fundo */
-    background-size: cover; /* Garante que a imagem cubra o header */
-    background-position: center;
-    position: relative; /* Para permitir a camada de transparência */
-    color: white;
-    padding: 10px 20px;
-    height: 90px; /* Ajuste o tamanho do header conforme necessário */
-}
+    color: #ecf0f1; /* Light text for contrast */
+  }
+
+header h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
 
 /* Adiciona uma camada transparente sobre a imagem */
+
 header::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 30%;
     background-color: rgba(0, 0, 0, 0.5); /* Cor preta com 50% de opacidade */
     z-index: 1; /* Garante que a camada fique abaixo do conteúdo */
 }
@@ -41,6 +44,25 @@ header * {
     position: relative;
     z-index: 2; /* Garante que o conteúdo fique acima da camada de transparência */
 }
+
+header::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 5px;
+    background-color: #e67e22; /* Accent color */
+    margin: 20px auto 0;
+  }
+
+.small-text {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-top: 10px;
+    color: #ecf0f1; /* Matching the header */
+    text-transform: uppercase;
+  }
+  
 
 #logo {
     width: 100px;
