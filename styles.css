@@ -215,7 +215,7 @@ button:hover {
 .close {
     color: #f80404;
     float: right;
-    font-size: 28px;
+    font-size: 35px;
     font-weight: bold;
 }
 
@@ -341,7 +341,7 @@ button:hover {
     margin-top: 5px; /* Ajuste na margem para telas pequenas */
     font-size: 0.9rem; /* Tamanho do texto para telas pequenas */
     font-weight: bold;
-    color: #333;
+    color: #fefcfc;
     text-align: center;
 }
 
