@@ -14,6 +14,47 @@
     </header>
 
     <main>
+
+        <div class="highlights">
+            <!-- Destaque 1 -->
+            <div class="highlight" onclick="openHighlight(0)">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvQtpJg07MQV-o6-qE7qT_pCgb66xm1KsxZw&s" alt="Erva">
+                <p>Ervas</p>
+            </div>
+        
+            <!-- Destaque 2 -->
+            <div class="highlight" onclick="openHighlight(1)">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_680356-MLB69513321080_052023-O.webp" alt="Garrafas">
+                <p>Garrafas</p>
+            </div>
+        
+            <!-- Destaque 3 -->
+            <div class="highlight" onclick="openHighlight(2)">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX6Qi0KfdMxuIsMh0Nu2qGA2txpIu2eDpJ5A&s" alt="Bombas">
+                <p>Bombas</p>
+            </div>
+        
+            <!-- Destaque 4 -->
+            <div class="highlight" onclick="openHighlight(3)">
+                <img src="https://cdn.awsli.com.br/356/356708/produto/65914081/cop02-scd-thhmx8yx5a.jpg" alt="Copos">
+                <p>Copos</p>
+            </div>
+        
+            <!-- Destaque 5 -->
+            <div class="highlight" onclick="openHighlight(4)">
+                <img src="https://blog.nautikalazer.com.br/wp-content/uploads/2023/11/Qual-%C3%A9-a-diferen%C3%A7a-entre-canivete-e-faca.png" alt="Acessórios">
+                <p>Acessórios</p>
+            </div>
+        </div>
+        
+        <!-- Modal para visualização das imagens -->
+        <div id="highlightModal" class="modal">
+            <span class="close" onclick="closeHighlight()">&times;</span>
+            <img class="modal-content" id="highlightImage">
+            <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+            <a class="next" onclick="changeImage(1)">&#10095;</a>
+        </div> 
+
         <!-- Seção Ervas -->
         <section id="ervas">
             <h2>Ervas Tereré</h2>
