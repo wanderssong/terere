@@ -102,18 +102,27 @@ h2 {
 
 
 /* Botões de navegação */
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
-    padding: 16px;
+    padding: 10px; /* Reduzido para telas pequenas */
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px; /* Tamanho reduzido para telas pequenas */
     user-select: none;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50%;
+}
+
+
+.prev, .next {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .prev {
@@ -304,9 +313,11 @@ button:hover {
 }
 
 /* Nome do destaque no modal */
+/* Estilo geral dos destaques (como no Instagram) */
 .highlights {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap; /* Permite que os destaques quebrem em várias linhas */
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -315,27 +326,25 @@ button:hover {
     flex-direction: column;
     align-items: center;
     cursor: pointer;
+    margin: 10px; /* Adiciona margem entre os destaques */
 }
 
 .highlight img {
-    width: 80px;
-    height: 80px;
+    width: 60px; /* Tamanho para telas pequenas */
+    height: 60px; /* Tamanho para telas pequenas */
     border-radius: 50%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.highlight img:hover {
-    transform: scale(1.1);
-}
-
 .highlight p {
-    margin-top: 10px;
-    font-size: 1rem;
+    margin-top: 5px; /* Ajuste na margem para telas pequenas */
+    font-size: 0.9rem; /* Tamanho do texto para telas pequenas */
     font-weight: bold;
-    color: #fcf9f9;
+    color: #333;
     text-align: center;
 }
+
 
 /* Modal de Imagem */
 .image-modal {
