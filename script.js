@@ -117,14 +117,15 @@ function removeFromCart(index) {
 // Função para mostrar o modal do carrinho
 const modalCarrinho = document.getElementById("modalCarrinho");
 const abrirCarrinho = document.getElementById("abrirCarrinho");
-const fecharModal = document.querySelector(".modal .close");
+
+const fecharModal = document.querySelector(".modal-content .close");
 
 // Função para abrir o modal
 abrirCarrinho.addEventListener('click', function() {
     modalCarrinho.style.display = "flex"; // Exibe o modal (com flexbox para manter o alinhamento)
 });
 
-// Função para fechar o modal
+// Função para fechar o modal ao clicar no botão "X"
 fecharModal.addEventListener('click', function() {
     modalCarrinho.style.display = "none"; // Oculta o modal
 });
@@ -135,6 +136,7 @@ window.addEventListener('click', function(event) {
         modalCarrinho.style.display = "none";
     }
 });
+
 
 // Função para mostrar o toast (mensagem de feedback)
 function showToast(message) {
@@ -160,6 +162,7 @@ function openImageModal(src) {
 }
 
 // Função para fechar o modal ao clicar no X ou fora da imagem
+
 closeModal.onclick = function() {
     imageModal.style.display = 'none';
 }
