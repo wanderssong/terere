@@ -3,7 +3,7 @@ let total = 0;
 // Variável para o contador do carrinho
 let cartCount = 0;
 
-let highlightNames = ['Erva', 'Garrafas', 'Bombas', 'Copos', 'Acessórios'];
+let highlightNames = ['Erva', 'Garrafas', 'Bombas', 'Copos', 'Camping', 'Bonés'];
 
 let highlights = [
     ['https://scontent.fops4-1.fna.fbcdn.net/v/t39.30808-6/299876944_459074529428575_2395053108917908914_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=a42lSgrrzZoQ7kNvgGMvmGS&_nc_ht=scontent.fops4-1.fna&_nc_gid=AMkRrx0K2pRdHfiwSrjY7j-&oh=00_AYDdmz1xCCxC0Z6My8roT8xPAuE8mc0rMlUMl9VmJox_WA&oe=6700D0FE','https://scontent.fops4-1.fna.fbcdn.net/v/t39.30808-6/298381921_454798293189532_6443795375996164081_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=Hi0NqShZwdAQ7kNvgGQCqSG&_nc_ht=scontent.fops4-1.fna&oh=00_AYAQLpbTee1KDDST6tb3l54HSOTbG99FGxHUez8APyfD0w&oe=6700EF42', 'https://scontent.fops4-1.fna.fbcdn.net/v/t39.30808-6/301051174_463439988992029_4481920318467554080_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=3a1ebe&_nc_ohc=EWdiFGZ-jxgQ7kNvgGyas_d&_nc_ht=scontent.fops4-1.fna&oh=00_AYCc2Bs6zHt7HP3T8xR_eycRS5ktthYB-lKdK87Fgk0gpg&oe=6700EA06'], // ERVAS
@@ -11,6 +11,7 @@ let highlights = [
     ['https://images.tcdn.com.br/img/img_prod/1197310/bomba_de_terere_chacal_achatada_inox_preta_3391_2_b8cc4d92a27fd04d7ee0b092b711df5a.jpeg','https://images.tcdn.com.br/img/img_prod/1197310/bomba_de_terere_chacal_achatada_inox_preta_3391_3_2dbcf0a591467f3206f64f006847d4aa.jpg', 'https://cdn.awsli.com.br/2512/2512424/produto/302629040/36819396-6f77-11ef-a0a9-62f9647ce288-my3uan85vf.jpeg'], // BOMBAS
     ['https://scontent.fops4-1.fna.fbcdn.net/v/t39.30808-6/420615695_877523097708419_5439552721990096985_n.jpg?stp=dst-jpg_s600x600&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_ohc=T2X1d1mTwicQ7kNvgHTxj5R&_nc_ht=scontent.fops4-1.fna&oh=00_AYDyeTej8s9N9degA8tdL97iveP8vl7s9mYHKu90p9aYJQ&oe=6700D2B4', 'https://scontent.fops4-1.fna.fbcdn.net/v/t39.30808-6/420156626_877523131041749_2958049427807408267_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=127cfc&_nc_ohc=bpA_mUss8pYQ7kNvgGrCoFo&_nc_ht=scontent.fops4-1.fna&oh=00_AYB2pptlEO4RZaG2mFVERLS7i7xrXHTf4d1uvUup47NoLA&oe=6700D2BE','https://scontent.fops4-1.fna.fbcdn.net/v/t39.30808-6/420158458_877522984375097_8303900879425004579_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zlBtMxf0YmQQ7kNvgE1YGcV&_nc_ht=scontent.fops4-1.fna&_nc_gid=AEbp8feoDRtVWKloyy8znob&oh=00_AYAxzb6yJMU7r4Gqf9BqaWNUL5i_kXznVbhkY7UsGBI1DA&oe=6700D687'], // COPOS
     ['https://milicopadrao.cdn.magazord.com.br/img/2022/07/produto/1023/canivete-caratuva.jpg?ims=fit-in/865x865/filters:fill(white)', 'https://cdn.awsli.com.br/600x450/1211/1211131/produto/125396484/e5dc55fdb1.jpg'], // Acessorios
+    ['https://images.tcdn.com.br/img/img_prod/548537/bone_txc_brand_aba_curva_11772c_23919_1_807097a56591dfac9094ecefa5c764e1.jpg','https://images.tcdn.com.br/img/img_prod/1050124/bone_txc_azul_marinho_e_branco_com_tela_869c_3297_1_fa318803522d4f4e718b394cefd60775.jpg'] //BONES
 ];
 
 let currentHighlight = 0;
