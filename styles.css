@@ -4,7 +4,7 @@ body {
     min-height: 100vh; /* Garante que o corpo ocupe pelo menos a altura da tela */
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-image: url('https://img.freepik.com/fotos-premium/um-cowboy-monta-um-cavalo-no-deserto_549702-8645.jpg'); /* Adiciona a imagem de fundo */
+    background-image: url('https://st3.depositphotos.com/1031174/32480/i/450/depositphotos_324805846-stock-photo-green-concrete-textured-wall.jpg'); /* Adiciona a imagem de fundo */
     padding: 0;
     color: #333;
 }
@@ -17,7 +17,7 @@ main {
 header {
     text-align: center;
     padding: 17px;
-    background-image: url('https://img.freepik.com/fotos-gratis/fundo-de-tabua-de-madeira_53876-16139.jpg'); /* Adiciona a imagem de fundo */
+    background-image: url('https://st3.depositphotos.com/1031174/32480/i/450/depositphotos_324805846-stock-photo-green-concrete-textured-wall.jpg'); /* Adiciona a imagem de fundo */
     color: #ecf0f1; /* Light text for contrast */
   }
 
